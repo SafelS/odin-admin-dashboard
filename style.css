@@ -5,6 +5,7 @@
 
 ul{
     list-style-type: none;
+
 }
 
 .main-container{
@@ -22,19 +23,27 @@ ul{
 
 .content{
     display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    gap: 25px;
+    grid-template-columns: repeat(2, minmax(350px,1fr));
+    padding: 25px;
+
+
 }
 
 .content .card{
     height: 200px;
     width: 350px;
-    border: 1px solid blue;
+    background-image: linear-gradient(to right, rgb(248, 184, 66) 2%, rgba(0,0,0,0) 2%  );
+
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    padding-left: 30px;
+    padding-top: 30px;
 }
 
 .content .content-title{
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 3;
 }
 
 .content .side-content{
@@ -44,8 +53,33 @@ ul{
 
 }
 
+.side-content{
+    display: grid;
+    grid-template-rows: auto 1fr auto 1fr; 
+    padding: 25px;
+    gap: 25px;
+}
+
 .sidebar{
     border: 1px solid black;
+    color: white;
+    background-color: rgb(26, 181, 228);
+    display: grid;
+    grid-template-rows: auto auto auto;
+    padding-left: 15px;
+}
+
+
+.card,
+.side-card{
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card .symbols{
+    text-align: right;
+    padding-right: 30px;
 }
 
 .header{
